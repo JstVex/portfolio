@@ -20,17 +20,17 @@ const writing = [
 
 const Writing = () => {
     return (
-        <section className="my-12">
-            <h2 className="text-2xl font-semibold my-3">
+        <section className="my-12 md:flex md:justify-between md:items-start">
+            <h2 className="text-2xl font-semibold my-3 md:my-0">
                 Writing
             </h2>
-            <ul className="flex flex-col space-y-2">
+            <ul className="flex flex-col space-y-3 w-divider">
                 {writing.map((post) => (
-                    <li key={post.title} className="flex items-center justify-between">
+                    <li key={post.title} className="flex flex-col space-y-1">
                         <Link href={post.href} className="underline underline-offset-4 decoration-zinc-500">
                             {post.title}
                         </Link>
-                        <div className="text-zinc-400">
+                        <div className="text-sm text-zinc-400">
                             {post.date}
                         </div>
                     </li>
