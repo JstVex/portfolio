@@ -1,7 +1,10 @@
+import Intro from "@/components/Home/Intro";
+import Main from "@/components/Layouts";
+
 export default function Home() {
   return (
-    <div>
-      hi
-    </div>
+    <Main>
+      <Intro />
+    </Main>
   )
 }
