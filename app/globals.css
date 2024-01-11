@@ -9,3 +9,24 @@ body,
   background-color: black;
   color: white;
 }
+
+.nav-link{
+  position: relative;
+  display: inline-block;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -3px;
+  left: 0;
+  background-color: currentColor;
+  transition: width 0.3s ease-in-out;
+  will-change: width;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
