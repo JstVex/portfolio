@@ -16,6 +16,9 @@ const config: Config = {
         main: "50rem",
         divider: "28rem",
       },
+      screens: {
+        xs: "475px",
+      }
     },
   },
   plugins: [],
