@@ -1,8 +1,8 @@
 import Main from "@/components/Layouts";
-import { projects } from "@/data/projects";
+import { allProjects } from "contentlayer/generated"
 
 const Project = ({ params }: { params: { slug: string } }) => {
-    const project = projects.find(project => project.slug === params.slug);
+    const project = allProjects.find(project => project.slugAsParams === params.slug);
 
     if (!project) {
         return (
@@ -25,7 +25,7 @@ const Project = ({ params }: { params: { slug: string } }) => {
                 </time>
             </div>
             <div className="text-zinc-400">
-                {project.techStack.join(" . ")}
+                {project.techStack?.join(" . ")}
             </div>
             <div className="mt-5">
                 {project.description}
