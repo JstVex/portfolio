@@ -5,6 +5,8 @@
 html,
 body,
 :root {
+  @apply selection:text-sky-500 dark:selection:bg-blue-800/30;
+  
   height: 100%;
   background-color: black;
   color: white;
@@ -29,4 +31,24 @@ body,
 
 .nav-link:hover::after {
   width: 100%;
+}
+
+@layer components {
+  .project-content {
+    figure {
+      @apply flex flex-col gap-2 mb-12 mt-10 w-full md:mb-16;
+  
+      img {
+        @apply w-full;
+      }
+  
+      figcaption {
+        @apply text-zinc-400 text-sm;
+      }
+    }
+
+    p {
+        @apply mb-4 text-sm md:text-base font-light tracking-wide leading-relaxed text-zinc-100;
+      }
+  }
 }
