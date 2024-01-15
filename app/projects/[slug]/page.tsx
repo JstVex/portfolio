@@ -1,5 +1,7 @@
 import Main from "@/components/Layouts";
 import { allProjects } from "contentlayer/generated"
+import { Mdx } from "@/components/Mdx/Mdx";
+import { format, parseISO } from "date-fns";
 
 const Project = ({ params }: { params: { slug: string } }) => {
     const project = allProjects.find(project => project.slugAsParams === params.slug);
@@ -20,17 +22,19 @@ const Project = ({ params }: { params: { slug: string } }) => {
                 <h1 className="text-3xl font-semibold">
                     {project.title}
                 </h1>
-                <time>
-                    {project.year}
+                <time className="text-sm md:text-base">
+                    {format(parseISO(project.year), 'yyyy')}
                 </time>
             </div>
-            <div className="text-zinc-400">
+            <div className="text-sm md:text-base text-zinc-400">
                 {project.techStack?.join(" . ")}
             </div>
-            <div className="mt-5">
+            <div className="text-sm md:text-base mt-5 mb-12 md:mb-20">
                 {project.description}
             </div>
-
+            <section className="project-content">
+                <Mdx code={project.body.code} />
+            </section>
         </Main>
     );
 }
