@@ -22,7 +22,7 @@ const Navbar = () => {
                 <ul className="flex items-center space-x-5 text-sm">
                     {pages.map((page) => (
                         <li key={page.href} className="list-none">
-                            <Link href={page.href} className={`nav-link ${pathname === page.href ? "" : "text-gray-400"}`}>
+                            <Link href={page.href} className={`nav-link ${pathname === page.href ? "" : "text-zinc-400"}`}>
                                 {page.label}
                             </Link>
                         </li>

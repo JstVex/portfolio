@@ -9,7 +9,7 @@ const Section: React.FC<SectionProps> = ({ title, children }) => {
             <h2 className="text-xl font-semibold my-3 md:my-0">
                 {title}
             </h2>
-            <ul className="flex flex-col space-y-3 md:w-divider">
+            <ul className="flex flex-col gap-y-[0.85rem] md:w-divider">
                 {children}
             </ul>
         </section>

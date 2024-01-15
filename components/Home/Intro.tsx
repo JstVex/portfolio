@@ -3,11 +3,11 @@ import Link from "next/link";
 
 const Intro = () => {
     return (
-        <section>
+        <section className="mb-16">
             <div className="">
-                <h2 className="text-2xl font-semibold">
+                <h1 className="text-3xl font-semibold">
                     Hein Htet Lu Lu
-                </h2>
+                </h1>
                 <p className="text-zinc-400">
                     Web developer / CS Undergrad / Aspiring software engineer
                 </p>

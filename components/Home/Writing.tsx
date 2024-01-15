@@ -24,7 +24,7 @@ const Writing = () => {
         <Section title="Writing">
             {writing.map((post) => (
                 <li key={post.title} className="flex flex-col space-y-1">
-                    <Link href={post.href} className="underline underline-offset-4 decoration-zinc-500">
+                    <Link href={post.href} className="underline underline-offset-4 transition-colors decoration-zinc-700 hover:decoration-zinc-500">
                         {post.title}
                     </Link>
                     <div className="text-sm text-zinc-400">
@@ -32,6 +32,9 @@ const Writing = () => {
                     </div>
                 </li>
             ))}
+            <Link href='/writing' className="text-sm text-zinc-400 underline underline-offset-4 transition-colors decoration-zinc-700 hover:decoration-zinc-500">
+                View all
+            </Link>
         </Section >
     );
 }

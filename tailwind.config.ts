@@ -10,11 +10,11 @@ const config: Config = {
     extend: {
       maxWidth: {
         main: "50rem",
-        divider: "28rem",
+        divider: "25rem",
       },
       width: {
         main: "50rem",
-        divider: "28rem",
+        divider: "25rem",
       },
       screens: {
         xs: "475px",
