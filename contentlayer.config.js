@@ -38,6 +38,9 @@ export const Project = defineDocumentType(() => ({
             options: ['featured', 'in-development', 'frontend'],
             required: true
         },
+        link: {
+            type: 'string'
+        },
         techStack: {
             type: 'list',
             of: { type: 'string' }
