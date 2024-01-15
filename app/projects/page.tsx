@@ -1,10 +1,11 @@
 import Main from "@/components/Layouts";
 import Card from "@/components/Projects/Card";
-import { projects } from "@/data/projects";
+import { allProjects } from "@/.contentlayer/generated";
+import { format, parseISO } from "date-fns";
 
-const featured = projects.filter(project => project.type === "featured");
-const inDevelopment = projects.filter(project => project.type === "in-development");
-const frontend = projects.filter(project => project.type === "frontend");
+const featured = allProjects.filter(project => project.variety === "featured");
+const inDevelopment = allProjects.filter(project => project.variety === "in-development");
+const frontend = allProjects.filter(project => project.variety === "frontend");
 
 const Projects = () => {
     return (
@@ -24,11 +25,11 @@ const Projects = () => {
                 {featured.map((project, idx) => (
                     <Card
                         title={project.title}
-                        imageSrc={project.imageSrc}
+                        imageSrc={`/images/projects/${project.slugAsParams}/${project.image}`}
                         imageAlt={project.title}
                         description={project.description}
-                        year={project.year}
-                        link={`/projects/${project.slug}`}
+                        year={format(parseISO(project.year), 'yyyy')}
+                        link={`/projects/${project.slugAsParams}`}
                         key={idx}
                         addBorder={featured.length > 2}
                     />
@@ -41,11 +42,11 @@ const Projects = () => {
                 {inDevelopment.map((project, idx) => (
                     <Card
                         title={project.title}
-                        imageSrc={project.imageSrc}
+                        imageSrc={`/images/projects/${project.slugAsParams}/${project.image}`}
                         imageAlt={project.title}
                         description={project.description}
-                        year={project.year}
-                        link={`/projects/${project.slug}`}
+                        year={format(parseISO(project.year), 'yyyy')}
+                        link={`/projects/${project.slugAsParams}`}
                         key={idx}
                         addBorder={inDevelopment.length > 2}
                     />
@@ -54,15 +55,15 @@ const Projects = () => {
             <h2 className="text-2xl font-semibold mt-5 mb-4 pt-5 border-t border-zinc-900">
                 Front-end
             </h2>
-            <div className="col-span-full grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {frontend.map((project, idx) => (
                     <Card
                         title={project.title}
-                        imageSrc={project.imageSrc}
+                        imageSrc={`/images/projects/${project.slugAsParams}/${project.image}`}
                         imageAlt={project.title}
                         description={project.description}
-                        year={project.year}
-                        link={`/projects/${project.slug}`}
+                        year={format(parseISO(project.year), 'yyyy')}
+                        link={`/projects/${project.slugAsParams}`}
                         key={idx}
                         addBorder={frontend.length > 2}
                     />
