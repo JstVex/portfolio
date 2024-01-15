@@ -1,11 +1,24 @@
 import Main from "@/components/Layouts";
 import Card from "@/components/Projects/Card";
 import { allProjects } from "@/.contentlayer/generated";
-import { format, parseISO } from "date-fns";
+import { compareDesc, format, parseISO } from "date-fns";
 
-const featured = allProjects.filter(project => project.variety === "featured");
-const inDevelopment = allProjects.filter(project => project.variety === "in-development");
-const frontend = allProjects.filter(project => project.variety === "frontend");
+const filteredFeatured = allProjects.filter(project => project.variety === "featured");
+const filteredInDevelopment = allProjects.filter(project => project.variety === "in-development");
+const filteredFrontend = allProjects.filter(project => project.variety === "frontend");
+
+const featured = filteredFeatured.sort((a, b) =>
+    compareDesc(new Date(a.year), new Date(b.year))
+)
+
+const inDevelopment = filteredInDevelopment.sort((a, b) =>
+    compareDesc(new Date(a.year), new Date(b.year))
+)
+
+const frontend = filteredFrontend.sort((a, b) =>
+    compareDesc(new Date(a.year), new Date(b.year))
+)
+
 
 const Projects = () => {
     return (
