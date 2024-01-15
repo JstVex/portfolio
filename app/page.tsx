@@ -8,8 +8,13 @@ import { allProjects } from "@/.contentlayer/generated";
 import { compareDesc } from "date-fns";
 
 const filteredFeatured = allProjects.filter((project) => project.variety === "featured");
+const filteredInDevelopment = allProjects.filter((project) => project.variety === "in-development");
 
 const featured = filteredFeatured.sort((a, b) =>
+  compareDesc(new Date(a.year), new Date(b.year))
+)
+
+const inDevelopment = filteredInDevelopment.sort((a, b) =>
   compareDesc(new Date(a.year), new Date(b.year))
 )
 
@@ -19,7 +24,7 @@ export default function Home() {
       <Intro />
       <Featured featured={featured} />
       <Writing />
-      <Development />
+      <Development inDevelopment={inDevelopment} />
       <Reading />
     </Main>
   )
