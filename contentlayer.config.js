@@ -38,6 +38,10 @@ export const Project = defineDocumentType(() => ({
             options: ['featured', 'in-development', 'frontend'],
             required: true
         },
+        github: {
+            type: 'string',
+            required: true
+        },
         link: {
             type: 'string'
         },
