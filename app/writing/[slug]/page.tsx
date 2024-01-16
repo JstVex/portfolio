@@ -1,8 +1,9 @@
-import { allWritings } from "@/.contentlayer/generated";
 import Main from "@/components/Layouts";
-import { Mdx } from "@/components/Mdx/Mdx";
-import { format, parseISO } from "date-fns";
 import Image from "next/image";
+import { allWritings } from "@/.contentlayer/generated";
+import { Mdx, MdxCode } from "@/components/Mdx/Mdx";
+import { format, parseISO } from "date-fns";
+
 
 const WritingPage = ({ params }: { params: { slug: string } }) => {
     const writing = allWritings.find(writing => writing.slugAsParams === params.slug);
@@ -20,7 +21,7 @@ const WritingPage = ({ params }: { params: { slug: string } }) => {
     if (writing.variety === "career") {
         return (
             <Main>
-                <section>
+                <section className="mb-10">
                     <div>
                         <h2 className="text-3xl font-semiboldl">
                             {writing.title}
@@ -30,7 +31,9 @@ const WritingPage = ({ params }: { params: { slug: string } }) => {
                         </div>
                     </div>
                 </section>
-
+                <section className="career-content">
+                    <MdxCode code={writing.body.code} />
+                </section>
             </Main>
         );
     }
