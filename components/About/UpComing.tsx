@@ -3,7 +3,7 @@ import Section from "../Layouts/Section";
 
 const UpComing = () => {
     return (
-        <Section title="Upcoming">
+        <Section title="Upcoming" className="md:gap-y-8">
             <li className="flex flex-col space-y-1">
                 <h2>
                     NASA Proposal Writing and Evualutaion Experience Academy

@@ -1,13 +1,13 @@
-import { ChevronRight, Minus } from "lucide-react";
+import { Minus } from "lucide-react";
 
 const Capabilities = () => {
     return (
-        <section className="mt-16 my-12 pt-5 border-t border-zinc-900">
+        <section className="mt-16 pt-5 border-t border-zinc-900">
             <h2 className="text-2xl font-semibold md:mb-3">
                 Capabilities
             </h2>
             <div>
-                <div className="pt-5 md:pb-10 md:flex md:justify-between md:items-start">
+                <div className="pt-3 md:pt-5 md:pb-10 md:flex md:justify-between md:items-start">
                     <div className="text-lg my-3 md:my-0">
                         <h3>
                             Frontend
@@ -35,7 +35,7 @@ const Capabilities = () => {
                         </li>
                     </ul>
                 </div>
-                <div className="pt-5 md:pb-10 md:flex md:justify-between md:items-start">
+                <div className="pt-3 md:pt-5 md:pb-10 md:flex md:justify-between md:items-start">
                     <div className="text-lg my-3 md:my-0">
                         <h3>
                             Backend
@@ -62,7 +62,7 @@ const Capabilities = () => {
                         </li>
                     </ul>
                 </div>
-                <div className="pt-5 md:pb-10 md:flex md:justify-between md:items-start">
+                <div className="pt-3 pb-16 md:pt-5 md:flex md:justify-between md:items-start">
                     <div className="text-lg my-3 md:my-0">
                         <h3>
                             Additional
