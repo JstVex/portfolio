@@ -2,6 +2,7 @@ import Main from "@/components/Layouts";
 import { allProjects } from "contentlayer/generated"
 import { Mdx } from "@/components/Mdx/Mdx";
 import { format, parseISO } from "date-fns";
+import { ExternalLink, Github } from "lucide-react";
 
 const Project = ({ params }: { params: { slug: string } }) => {
     const project = allProjects.find(project => project.slugAsParams === params.slug);
@@ -18,20 +19,31 @@ const Project = ({ params }: { params: { slug: string } }) => {
 
     return (
         <Main>
-            <div>
-                <h1 className="text-3xl font-semibold">
-                    {project.title}
-                </h1>
+            <section>
+                <div className="flex items-center justify-between">
+                    <h1 className="text-3xl font-semibold">
+                        {project.title}
+                    </h1>
+                    <div className="flex items-center gap-x-3">
+                        <a href={project.github} target="_blank">
+                            <Github size={20} className="text-zinc-400 transition-colors hover:text-zinc-100" />
+                        </a>
+                        <a href={project.link} target="_blank">
+                            <ExternalLink size={20} className="text-zinc-400 transition-colors hover:text-zinc-100" />
+                        </a>
+                    </div>
+                </div>
+
                 <time className="text-sm md:text-base">
                     {format(parseISO(project.year), 'yyyy')}
                 </time>
-            </div>
-            <div className="text-sm md:text-base text-zinc-400">
-                {project.techStack?.join(" . ")}
-            </div>
-            <div className="text-sm md:text-base mt-5 mb-12 md:mb-20">
-                {project.description}
-            </div>
+                <div className="text-sm md:text-base text-zinc-400">
+                    {project.techStack?.join(" . ")}
+                </div>
+                <div className="text-sm md:text-base mt-5 mb-12 md:mb-20">
+                    {project.description}
+                </div>
+            </section>
             <section className="project-content">
                 <Mdx code={project.body.code} />
             </section>
