@@ -58,4 +58,9 @@ body,
       @apply text-[0.8rem] font-light leading-relaxed indent-10 mb-1;
     }
   }
+
+  .career-content {
+    @apply rounded-lg p-0 sm:p-20 sm:bg-white/[.06]
+  }
 }
+
