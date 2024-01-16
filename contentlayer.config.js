@@ -53,7 +53,36 @@ export const Project = defineDocumentType(() => ({
     computedFields
 }))
 
+export const Writing = defineDocumentType(() => ({
+    name: "Writing",
+    filePathPattern: "writing/*.mdx",
+    contentType: "mdx",
+    fields: {
+        title: {
+            type: 'string',
+            required: true
+        },
+        date: {
+            type: 'date',
+            required: true
+        },
+        description: {
+            type: 'string',
+            required: true
+        },
+        image: {
+            type: 'string'
+        },
+        variety: {
+            type: 'enum',
+            options: ['career', 'thoughts'],
+            required: true
+        }
+    },
+    computedFields
+}))
+
 export default makeSource({
     contentDirPath: "./content",
-    documentTypes: [Project]
+    documentTypes: [Project, Writing]
 })
