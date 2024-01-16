@@ -51,4 +51,11 @@ body,
         @apply mb-4 text-sm md:text-base font-light tracking-wide leading-relaxed text-zinc-100;
       }
   }
+
+  .thought-content {
+    @apply flex flex-col md:w-divider;
+    p {
+      @apply text-[0.8rem] font-light leading-relaxed indent-10 mb-1;
+    }
+  }
 }
