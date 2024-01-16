@@ -4,6 +4,7 @@ import { format, parseISO } from "date-fns";
 import Link from "next/link";
 
 const career = allWritings.filter(writing => writing.variety === "career");
+const thoughts = allWritings.filter(writing => writing.variety === "thoughts");
 
 const Writing = () => {
     return (
@@ -18,12 +19,29 @@ const Writing = () => {
                     </p>
                 </div>
             </section>
-            <section>
-                <h2 className="text-2xl font-semibold mt-10 mb-4 pt-5 border-t border-zinc-900">
+            <section className="mb-16 mt-10 pt-5 border-t border-zinc-900">
+                <h2 className="text-2xl font-semibold mb-4">
                     Career
                 </h2>
                 <div className="flex flex-col gap-y-[0.85rem]">
                     {career.map((writing, idx) => (
+                        <div key={idx} className="flex items-center justify-between">
+                            <h3 className="text-zinc-400">
+                                {format(parseISO(writing.date), 'MMM dd, yyyy')}
+                            </h3>
+                            <Link href={`/writing/${writing.slugAsParams}`} className="underline underline-offset-4 transition-colors decoration-zinc-700 hover:decoration-zinc-500 md:w-divider">
+                                {writing.title}
+                            </Link>
+                        </div>
+                    ))}
+                </div>
+            </section>
+            <section className="mb-16 mt-10 pt-5 border-t border-zinc-900">
+                <h2 className="text-2xl font-semibold mb-4">
+                    Thoughts
+                </h2>
+                <div className="flex flex-col gap-y-[0.85rem]">
+                    {thoughts.map((writing, idx) => (
                         <div key={idx} className="flex items-center justify-between">
                             <h3 className="text-zinc-400">
                                 {format(parseISO(writing.date), 'MMM dd, yyyy')}
