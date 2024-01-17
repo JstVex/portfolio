@@ -34,7 +34,7 @@ const Projects = () => {
             <h2 className="text-2xl font-semibold mt-10 mb-4 pt-5 border-t border-zinc-900">
                 Featured
             </h2>
-            <div className="col-span-full grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {featured.map((project, idx) => (
                     <Card
                         title={project.title}
@@ -51,7 +51,7 @@ const Projects = () => {
             <h2 className="text-2xl font-semibold mt-4 mb-4 pt-5 border-t border-zinc-900">
                 In Development
             </h2>
-            <div className="col-span-full grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {inDevelopment.map((project, idx) => (
                     <Card
                         title={project.title}

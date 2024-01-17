@@ -23,10 +23,10 @@ const Writing = () => {
                 <h2 className="text-2xl font-semibold mb-4">
                     Career
                 </h2>
-                <div className="flex flex-col gap-y-[0.85rem]">
+                <div className="flex flex-col gap-y-4 md:gap-y-[0.85rem]">
                     {career.map((writing, idx) => (
-                        <div key={idx} className="flex items-center justify-between">
-                            <h3 className="text-zinc-400">
+                        <div key={idx} className="flex flex-col md:flex-row md:items-center md:justify-between">
+                            <h3 className="text-sm md:text-base text-zinc-400">
                                 {format(parseISO(writing.date), 'MMM dd, yyyy')}
                             </h3>
                             <Link href={`/writing/${writing.slugAsParams}`} className="underline underline-offset-4 transition-colors decoration-zinc-700 hover:decoration-zinc-500 md:w-divider">
@@ -40,10 +40,10 @@ const Writing = () => {
                 <h2 className="text-2xl font-semibold mb-4">
                     Thoughts
                 </h2>
-                <div className="flex flex-col gap-y-[0.85rem]">
+                <div className="flex flex-col gap-y-4 md:gap-y-[0.85rem]">
                     {thoughts.map((writing, idx) => (
-                        <div key={idx} className="flex items-center justify-between">
-                            <h3 className="text-zinc-400">
+                        <div key={idx} className="flex flex-col md:flex-row md:items-center md:justify-between">
+                            <h3 className="text-sm md:text-base text-zinc-400">
                                 {format(parseISO(writing.date), 'MMM dd, yyyy')}
                             </h3>
                             <Link href={`/writing/${writing.slugAsParams}`} className="underline underline-offset-4 transition-colors decoration-zinc-700 hover:decoration-zinc-500 md:w-divider">
