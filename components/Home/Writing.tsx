@@ -1,34 +1,29 @@
 import Link from "next/link";
-import Section from "../Layouts/Section";
+import Section from "@/components/Layouts/Section";
+import { format, parseISO } from "date-fns";
 
-const writing = [
-    {
-        title: "How to use Next.js with Tailwind CSS",
-        date: "August 21, 2021",
-        href: "/writing/how-to-use-nextjs-with-tailwind-css",
-    },
-    {
-        title: "How to implement mdx-blog in your Next.js project",
-        date: "June 09, 2021",
-        href: "/writing/how-to-implement-mdx-blog-in-your-nextjs-project",
-    },
-    {
-        title: "Simplicity and its effect on mind",
-        date: "February 13, 2021",
-        href: "/writing/simplicity-and-its-effect-on-mind",
-    }
-]
+interface WritingProps {
+    writings: {
+        title: string;
+        date: string;
+        description: string;
+        image?: string;
+        variety: "career" | "thoughts";
+        slugAsParams: string;
+    }[];
+}
 
-const Writing = () => {
+
+const Writing: React.FC<WritingProps> = ({ writings }) => {
     return (
         <Section title="Writing">
-            {writing.map((post) => (
+            {writings.map((post) => (
                 <li key={post.title} className="flex flex-col space-y-1">
-                    <Link href={post.href} className="underline underline-offset-4 transition-colors decoration-zinc-700 hover:decoration-zinc-500">
+                    <Link href={`/writing/${post.slugAsParams}`} className="underline underline-offset-4 transition-colors decoration-zinc-700 hover:decoration-zinc-500">
                         {post.title}
                     </Link>
                     <div className="text-sm text-zinc-400">
-                        {post.date}
+                        {format(parseISO(post.date), 'MMM dd, yyyy')}
                     </div>
                 </li>
             ))}
