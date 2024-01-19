@@ -44,8 +44,15 @@ const Project = ({ params }: { params: { slug: string } }) => {
                     {project.description}
                 </div>
             </section>
+
             <section className="project-content">
-                <Mdx code={project.body.code} />
+                {project.published === false ? (
+                    <p>
+                        More about this project coming soon. Stay tuned!
+                    </p>
+                ) : (
+                    <Mdx code={project.body.code} />
+                )}
             </section>
         </Main>
     );
