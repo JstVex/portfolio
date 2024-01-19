@@ -51,6 +51,10 @@ export const Project = defineDocumentType(() => ({
         techStack: {
             type: 'list',
             of: { type: 'string' }
+        },
+        published: {
+            type: 'boolean',
+            default: true
         }
     },
     computedFields
@@ -80,6 +84,10 @@ export const Writing = defineDocumentType(() => ({
             type: 'enum',
             options: ['career', 'thoughts'],
             required: true
+        },
+        published: {
+            type: 'boolean',
+            default: true
         }
     },
     computedFields
