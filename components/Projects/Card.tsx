@@ -8,6 +8,7 @@ interface Props {
     description: string;
     year: string;
     link: string;
+    published: boolean;
     addBorder: boolean;
 }
 
@@ -18,6 +19,7 @@ const Card: React.FC<Props> = ({
     description,
     year,
     link,
+    published,
     addBorder,
 }) => {
     return (
@@ -36,7 +38,7 @@ const Card: React.FC<Props> = ({
                     <Image
                         alt={imageAlt}
                         className="hover:scale-105 transform transition-all duration-300 select-none"
-                        src={imageSrc}
+                        src={`${published ? imageSrc : "/images/projects/editing-in-progress.png"}`}
                         width={3840}
                         height={3840}
                         priority

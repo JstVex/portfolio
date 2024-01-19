@@ -49,6 +49,7 @@ const Projects = () => {
                         year={format(parseISO(project.year), 'yyyy')}
                         link={`/projects/${project.slugAsParams}`}
                         key={idx}
+                        published={project.published}
                         addBorder={featured.length > 2}
                     />
                 ))}
@@ -66,6 +67,7 @@ const Projects = () => {
                         year={format(parseISO(project.year), 'yyyy')}
                         link={`/projects/${project.slugAsParams}`}
                         key={idx}
+                        published={project.published}
                         addBorder={inDevelopment.length > 2}
                     />
                 ))}
@@ -83,6 +85,7 @@ const Projects = () => {
                         year={format(parseISO(project.year), 'yyyy')}
                         link={`/projects/${project.slugAsParams}`}
                         key={idx}
+                        published={project.published}
                         addBorder={frontend.length > 2}
                     />
                 ))}
