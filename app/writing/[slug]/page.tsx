@@ -18,6 +18,16 @@ const WritingPage = ({ params }: { params: { slug: string } }) => {
         );
     }
 
+    if (writing.published === false) {
+        return (
+            <Main>
+                <h1>
+                    Article coming soon. Stay tuned!
+                </h1>
+            </Main>
+        );
+    }
+
     if (writing.variety === "career") {
         return (
             <Main>
