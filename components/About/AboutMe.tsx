@@ -12,10 +12,10 @@ const AboutMe = () => {
 
             <div className="mt-6 text-base font-light tracking-wide leading-relaxed text-zinc-100 flex flex-col gap-3">
                 <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel deleniti fugiat minus cupiditate inventore reprehenderit impedit officiis! Vitae at unde debitis. Optio quis iure magnam eaque dolorem aperiam fugiat velit. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit perspiciatis dicta ab, cum mollitia ea tempora.
+                    I design and develop websites with the goal of solving problems, making impact and crafting compelling digital experiences. Programming is an integral part of my everyday life, and I believe that it has the power to shape and improve the world around us.
                 </p>
                 <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut perspiciatis quae sapiente, ipsa eaque earum, cumque nam quia possimus sit autem placeat laudantium sed itaque! Porro quae voluptatum quod dicta!
+                    I aim to create softwares that are not only functional and performant, but also beautiful and intuitive. In addition to my work, I also enjoy a calm place to relax and enjoy the nature which help to inspire me in my creative process.
                 </p>
             </div>
         </section>

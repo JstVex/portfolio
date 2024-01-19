@@ -23,12 +23,17 @@ const frontend = filteredFrontend.sort((a, b) =>
 const Projects = () => {
     return (
         <Main>
-            <h1 className="text-3xl font-semibold">
-                Projects
-            </h1>
+            <div>
+                <h1 className="text-3xl font-semibold">
+                    Projects
+                </h1>
+                <div className="text-zinc-400">
+                    {allProjects.length} sites
+                </div>
+            </div>
             <div className="mt-6 text-base font-light tracking-wide leading-relaxed text-zinc-100 flex flex-col gap-3">
                 <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel deleniti fugiat minus cupiditate inventore reprehenderit impedit officiis! Vitae at unde debitis. Optio quis iure magnam eaque dolorem aperiam fugiat velit. Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Throughout my journey as a web developer, I have worked on a variety of projects, ranging from small personal projects to large-scale web applications. I am always exlporing more problems to solve and expand my gallery of projects.
                 </p>
             </div>
             <h2 className="text-2xl font-semibold mt-10 mb-4 pt-5 border-t border-zinc-900">
