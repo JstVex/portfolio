@@ -3,6 +3,9 @@
 import { Snowflake, Sun } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
+import Swup from 'swup';
+
 
 const pages = [
     { href: '/', label: 'Index' },
@@ -12,7 +15,16 @@ const pages = [
 ];
 
 const Navbar = () => {
-    const pathname = usePathname();
+    const [pathname, setPathname] = useState<any | null>(usePathname());
+
+    useEffect(() => {
+        const swup = new Swup();
+
+        swup.hooks.on('page:view', (visit) => {
+            setPathname(visit.to.url)
+        })
+    }, [])
+
 
     return (
         <nav className="flex justify-center py-3 px-4 sm:px-6">

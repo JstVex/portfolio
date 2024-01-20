@@ -18,10 +18,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className=''>
-          <Navbar />
+        <Navbar />
+        <main id='swup' className='transition-fade'>
           {children}
-        </div>
+        </main>
       </body>
     </html>
   )
