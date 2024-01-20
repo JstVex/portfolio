@@ -12,7 +12,7 @@ const Education = () => {
                     </h3>
                 </div>
                 <ul className="flex flex-col space-y-3 md:w-divider">
-                    <div className="list-content flex flex-col space-y-1 border-none pt-0">
+                    <div className="flex flex-col space-y-1 border-none pt-0">
                         <div>
                             Associate of Science in Computer Science
                         </div>
@@ -37,7 +37,7 @@ const Education = () => {
                     </h3>
                 </div>
                 <ul className="flex flex-col space-y-3 md:w-divider">
-                    <div className="list-content flex flex-col space-y-1 border-none pt-0">
+                    <div className="flex flex-col space-y-1 border-none pt-0">
                         <div>
                             International General Certificate of Secondary Education
                         </div>
