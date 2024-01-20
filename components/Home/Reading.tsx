@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Section from "../Layouts/Section";
+import Section from "@/components/Layouts/Section";
 
 const books = [
     {
@@ -10,7 +10,7 @@ const books = [
     {
         title: "The Picture of Dorian Gray",
         author: "Oscar Wilde",
-        image: "/images/books/the-book-of-eels.png",
+        image: "/images/books/the-picture-of-dorian-gray.png",
     }
 ]
 const Reading = () => {
