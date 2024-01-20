@@ -17,20 +17,19 @@ const Capabilities = () => {
                         <li className="text-zinc-200 list-none flex items-center gap-x-2">
                             <Minus size={20} />
                             <span>
-                                HTML, CSS, JavaScript
+                                HTML, CSS, JavaScript, TypeScript
                             </span>
                         </li>
                         <li className="text-zinc-200 list-none flex items-center gap-x-2">
                             <Minus size={20} />
                             <span>
-                                React, Next.js, Tailwind CSS
+                                React, Next.js, Vite
                             </span>
-
                         </li>
                         <li className="text-zinc-200 list-none flex items-center gap-x-2">
                             <Minus size={20} />
                             <span>
-                                Typescript, Figma, Framer Motion
+                                Tailwind CSS, Figma, Framer Motion
                             </span>
                         </li>
                     </ul>
@@ -51,7 +50,7 @@ const Capabilities = () => {
                         <li className="text-zinc-200 list-none flex items-center gap-x-2">
                             <Minus size={20} />
                             <span>
-                                MongoDB, MySQL, Prisma, Planetscale
+                                MongoDB, MySQL, Prisma, Supabase
                             </span>
                         </li>
                         <li className="text-zinc-200 list-none flex items-center gap-x-2">
