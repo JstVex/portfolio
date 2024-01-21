@@ -10,6 +10,7 @@
     "contentlayer": "contentlayer build"
   },
   "dependencies": {
+    "@vercel/analytics": "^1.1.2",
     "clsx": "^2.1.0",
     "contentlayer": "^0.3.4",
     "date-fns": "^3.2.0",

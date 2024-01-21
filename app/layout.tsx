@@ -1,6 +1,7 @@
+import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import './globals.css'
+import { Analytics } from '@vercel/analytics/react';
 import Navbar from '@/components/Navigation/Navbar'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -53,6 +54,7 @@ export default function RootLayout({
         <main id='swup' className='transition-fade'>
           {children}
         </main>
+        <Analytics />
       </body>
     </html>
   )
