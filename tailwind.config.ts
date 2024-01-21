@@ -17,7 +17,7 @@ const config: Config = {
         divider: "25rem",
       },
       screens: {
-        xs: "475px",
+        xs: "505px",
       },
       animation: {
         'spin-slow': 'spin 3s linear infinite',
