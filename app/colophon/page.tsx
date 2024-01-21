@@ -1,5 +1,11 @@
+import type { Metadata } from "next";
 import Main from "@/components/Layouts";
 import Section from "@/components/Layouts/Section";
+
+export const metadata: Metadata = {
+    title: 'Hein Htet Lu Lu . Colophon',
+    description: 'Colophon',
+}
 
 const Colophon = () => {
     return (

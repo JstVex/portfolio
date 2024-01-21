@@ -1,7 +1,13 @@
+import type { Metadata } from "next";
 import Main from "@/components/Layouts";
 import { allWritings } from "@/.contentlayer/generated";
 import { format, parseISO } from "date-fns";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+    title: 'Hein Htet Lu Lu . Writing',
+    description: 'Articles about programming, my experiences and thoughts.',
+}
 
 const career = allWritings.filter(writing => writing.variety === "career");
 const thoughts = allWritings.filter(writing => writing.variety === "thoughts");
