@@ -4,6 +4,11 @@ import { Mdx } from "@/components/Mdx/Mdx";
 import { format, parseISO } from "date-fns";
 import { ExternalLink, Github } from "lucide-react";
 
+export const generateMetadata = ({ params }: { params: { slug: string; } }) => {
+    const project = allProjects.find((project: any) => project.slugAsParams === params.slug)
+    return { title: `Hein Htet Lu Lu . ${project?.title}` }
+}
+
 const Project = ({ params }: { params: { slug: string } }) => {
     const project = allProjects.find(project => project.slugAsParams === params.slug);
 

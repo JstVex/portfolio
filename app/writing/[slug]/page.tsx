@@ -4,6 +4,10 @@ import { allWritings } from "@/.contentlayer/generated";
 import { Mdx, MdxCode } from "@/components/Mdx/Mdx";
 import { format, parseISO } from "date-fns";
 
+export const generateMetadata = ({ params }: { params: { slug: string; } }) => {
+    const writing = allWritings.find((writing: any) => writing.slugAsParams === params.slug)
+    return { title: `Hein Htet Lu Lu . ${writing?.title}` }
+}
 
 const WritingPage = ({ params }: { params: { slug: string } }) => {
     const writing = allWritings.find(writing => writing.slugAsParams === params.slug);
