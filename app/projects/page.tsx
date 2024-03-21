@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Main from "@/components/Layouts";
 import Card from "@/components/Projects/Card";
 import { allProjects } from "@/.contentlayer/generated";
-import { compareDesc, format, parseISO } from "date-fns";
+import { compareAsc, compareDesc, format, parseISO } from "date-fns";
 
 export const metadata: Metadata = {
     title: 'Hein Htet Lu Lu . Projects',
@@ -14,15 +14,15 @@ const filteredInDevelopment = allProjects.filter(project => project.variety === 
 const filteredFrontend = allProjects.filter(project => project.variety === "frontend");
 
 const featured = filteredFeatured.sort((a, b) =>
-    compareDesc(new Date(a.year), new Date(b.year))
+    compareAsc(new Date(a.year), new Date(b.year))
 )
 
 const inDevelopment = filteredInDevelopment.sort((a, b) =>
-    compareDesc(new Date(a.year), new Date(b.year))
+    compareAsc(new Date(a.year), new Date(b.year))
 )
 
 const frontend = filteredFrontend.sort((a, b) =>
-    compareDesc(new Date(a.year), new Date(b.year))
+    compareAsc(new Date(a.year), new Date(b.year))
 )
 
 const Projects = () => {
