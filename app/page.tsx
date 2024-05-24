@@ -5,14 +5,14 @@ import Writing from "@/components/Home/Writing";
 import Reading from "@/components/Home/Reading";
 import Development from "@/components/Home/Development";
 import { allProjects, allWritings } from "@/.contentlayer/generated";
-import { compareDesc } from "date-fns";
+import { compareDesc, compareAsc } from "date-fns";
 
 const filteredFeatured = allProjects.filter((project) => project.variety === "featured");
 const filteredInDevelopment = allProjects.filter((project) => project.variety === "in-development");
 const filteredWritings = allWritings.filter(writing => writing.variety === "career");
 
 const featured = filteredFeatured.sort((a, b) =>
-  compareDesc(new Date(a.year), new Date(b.year))
+  compareAsc(new Date(a.year), new Date(b.year))
 )
 
 const inDevelopment = filteredInDevelopment.sort((a, b) =>
