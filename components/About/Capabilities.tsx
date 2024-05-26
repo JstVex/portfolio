@@ -61,6 +61,21 @@ const Capabilities = () => {
                         </li>
                     </ul>
                 </div>
+                <div className="pt-3 md:pt-5 md:pb-10 md:flex md:justify-between md:items-start">
+                    <div className="text-lg my-3 md:my-0">
+                        <h3>
+                            Mobile
+                        </h3>
+                    </div>
+                    <ul className="flex flex-col space-y-3 md:w-divider">
+                        <li className="text-zinc-200 list-none flex items-center gap-x-2">
+                            <Minus size={20} />
+                            <span>
+                                Ionic, Capacitor, React Native
+                            </span>
+                        </li>
+                    </ul>
+                </div>
                 <div className="pt-3 pb-16 md:pt-5 md:flex md:justify-between md:items-start">
                     <div className="text-lg my-3 md:my-0">
                         <h3>
@@ -71,7 +86,7 @@ const Capabilities = () => {
                         <li className="text-zinc-200 list-none flex items-center gap-x-2">
                             <Minus size={20} />
                             <span>
-                                C++, Python, Mathematics
+                                C++, Python
                             </span>
                         </li>
                         <li className="text-zinc-200 list-none flex items-center gap-x-2">

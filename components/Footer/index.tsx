@@ -14,7 +14,7 @@ const socials = [
     { href: 'https://github.com/JstVex', label: 'Github' },
     { href: 'https://www.linkedin.com/in/hein-htet-lu-lu/', label: 'LinkedIn' },
     { href: 'mailto:hh14lulu@gmail.com', label: 'Mail' },
-    { href: 'g', label: 'Resume' },
+    { href: 'https://drive.google.com/file/d/1sNaIzgmdlYJKXKMbkArNAdgP1zBxXV77/view?usp=sharing', label: 'Resume' },
 ]
 
 const Footer = () => {
